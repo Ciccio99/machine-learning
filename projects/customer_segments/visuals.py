@@ -150,7 +150,6 @@ def channel_results(reduced_data, outliers, pca_samples):
 	labels = ['Hotel/Restaurant/Cafe', 'Retailer']
 	grouped = labeled.groupby('Channel')
 	for i, channel in grouped:   
-	    i = int(i)
 	    print(i)
 	    channel.plot(ax = ax, kind = 'scatter', x = 'Dimension 1', y = 'Dimension 2', color = cmap((i-1)*1.0/2), label = labels[i-1], s=30);
 	    
